@@ -341,3 +341,43 @@ $small-button-width: 25%;
   }
 }
 
+// Alerts
+.alert {
+  height: 50px;
+  border-radius: 0px;
+
+  strong {
+    margin-left: 10px;
+  }
+}
+
+.alert-success {
+  @include alert-variant($background: $white, $border: $white, $color: $success);
+  border-top: 2px solid $success;
+
+  .btn-close {
+    color: $success;
+    filter: invert(56%) sepia(40%) saturate(556%) hue-rotate(115deg) brightness(89%) contrast(92%);
+  }
+}
+
+.alert-danger {
+  @include alert-variant($background: $white, $border: $white, $color: $danger);
+  border-top: 2px solid $danger;
+
+  .btn-close {
+    color: $danger;
+    filter: invert(25%) sepia(69%) saturate(2146%) hue-rotate(336deg) brightness(118%) contrast(86%);
+  }
+}
+
+.alert-warning {
+  @include alert-variant($background: $white, $border: $white, $color: $warning);
+  border-top: 2px solid $warning;
+
+  .btn-close {
+    color: $warning;
+    filter: invert(63%) sepia(70%) saturate(1322%) hue-rotate(339deg) brightness(107%) contrast(98%);
+  }
+}
+
