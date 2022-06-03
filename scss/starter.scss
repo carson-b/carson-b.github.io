@@ -1,0 +1,316 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Override Bootstrap here - This must be done BEFORE importing Bootstrap
+//
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: rgb(0, 0, 0);
+$body-bg: #f5f5f5;
+$border-radius: .4rem;
+$btn-focus-box-shadow: none!important;
+
+// Customize Global Colours
+$primary: #00A5E3;
+$secondary: #4E7482;
+$success: #39A389;
+$info: #00CCFF;
+$warning: #FC9B2E;
+$danger: #ED4548;
+$light: #F5F6F8;
+$dark: #061E2C;
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+@import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Import just the styles you need. Note that some stylesheets are required no matter what.
+
+/* @import "bootstrap/scss/functions"; // Required
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+// @import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+// @import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group"; // Requires forms
+// @import "bootstrap/scss/custom-forms";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/print"; */
+
+
+
+//
+// Custom styles
+//
+
+body {
+  position: relative;
+}
+
+button {
+  border-radius: 2px !important;
+}
+
+/* font styling */
+@font-face {
+  font-family: BeVietnamRegular;
+  src: url(../fonts/BeVietnamPro-Regular.ttf);
+}
+
+// Custom Colours
+$primary-light: #D1E8F0;
+$secondary-light: #D0D8DB;
+$success-light: #ACCFC6;
+$info-light: #CCF5FF;
+$warning-light: #FFDCB5;
+$danger-light: #FCCDCD;
+$dark-light: #061E2C30;
+$opacity-25: #CBDFF1;
+$opacity-50: #9DC6E7;
+$opacity-75: #6EB1DE;
+
+.bg-primary-light { background-color: $primary-light !important; }
+.bg-secondary-light { background-color: $secondary-light !important; }
+.bg-success-light { background-color: $success-light !important; }
+.bg-info-light { background-color: $info-light !important; }
+.bg-warning-light { background-color: $warning-light !important; }
+.bg-danger-light { background-color: $danger-light !important; }
+.bg-dark-light { background-color: $dark-light !important; }
+
+
+.col .container {
+  margin-bottom: 1rem;
+}
+
+
+// Custom Icons
+.icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.icon-custom {
+  background-size: cover;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+
+  /* Primary Icon */
+  &.pri { background-image : url(../img/ico_pri_wt.png); }
+  &.pri-soft { background-image: url(../img/ico_pri_bl.png); }
+
+  /* Success Icon */
+  &.suc { background-image : url(../img/ico_suc_wt.png); }
+  &.suc-soft { background-image : url(/assets/img/ico_suc_gr.png); }
+
+  /* Warning Icon */
+  &.war { background-image : url(../img/ico_war_wt.png); }
+  &.war-soft { background-image : url(../img/ico_war_or.png); }
+
+  /* Danger Icon */
+  &.dan { background-image : url(../img/ico_dan_wt.png); }
+  &.dan-soft { background-image : url(../img/ico_dan_rd.png); }
+
+  /* Dark/Loading Icon */
+  &.dar { background-image : url(../img/ico_ld_wt.png); }
+  &.dar-soft { background-image : url(../img/ico_ld_bk.png); }
+}
+
+
+/* ------------------------------------------------------------------------  Button Customization  ---------------------------------------------------------------- */
+
+// Button Height
+$large-button-height: 45px;
+$medium-button-height: 39px;
+$small-button-height: 29px;
+
+// Button Width Percentage
+$large-button-width: 100%;
+$medium-button-width: 50%;
+$small-button-width: 25%;
+
+.btn {
+  line-height: 0;
+}
+
+.btn {
+  
+  &:focus {
+    background-color: unset !important;
+  }
+}
+
+
+.btn-lg { height: $large-button-height }
+.btn-md { height: $medium-button-height }
+.btn-sm { height: $small-button-height }
+.btn-w-lg { width: $large-button-width }
+.btn-w-md { width: $medium-button-width }
+.btn-w-sm { width: $small-button-width }
+
+
+// Custom Buttons - (background, border, colour, hover-background, hover-border, hover-colour, active-background, active-border)
+.btn-primary {
+  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-color: $white, $active-background: $primary, $active-border: $primary);
+}
+.btn-secondary {
+  @include button-variant($background: $secondary, $border: $secondary, $color: $white, $hover-color: $white);
+}
+.btn-success {
+  @include button-variant($background: $success, $border: $success, $color: $white, $hover-color: $white);
+}
+.btn-info {
+  @include button-variant($background: $info, $border: $info, $color: $white, $hover-color: $white);
+}
+.btn-warning {
+  @include button-variant($background: $warning, $border: $warning, $color: $white, $hover-color: $white);
+}
+.btn-danger {
+  @include button-variant($background: $danger, $border: $danger, $color: $white, $hover-color: $white);
+}
+.btn-light {
+  @include button-variant($background: $light, $border: $light, $color: $dark, $hover-background: darken($light, 5%));
+}
+.btn-dark {
+  @include button-variant($background: $dark, $border: $dark, $color: $white, $hover-background: lighten($dark, 5%), $hover-border: lighten($dark, 5%));
+}
+.btn-link {
+  text-decoration: none;
+  color: $dark;
+}
+
+// Custom Soft Buttons - (background (required), border(required), colour(required), hover-background, hover-border, hover-colour, active-background, active-border)
+.btn-primary-soft {
+  @include button-variant($background: $primary-light, $border: $primary-light, $color: $primary, $hover-background: $primary, $hover-border: $primary, $hover-color: $white, $active-background: $primary-light, $active-border: $primary-light);
+}
+.btn-secondary-soft {
+  @include button-variant($background: $secondary-light, $border: $secondary-light, $color: $secondary, $hover-background: $secondary, $hover-border: $secondary, $hover-color: $white);
+}
+.btn-success-soft {
+  @include button-variant($background: $success-light, $border: $success-light, $color: $success, $hover-background: $success, $hover-border: $success, $hover-color: $white);
+}
+.btn-info-soft {
+  @include button-variant($background: $info-light, $border: $info-light, $color: $info, $hover-background: $info, $hover-border: $info, $hover-color: $white);
+}
+.btn-warning-soft {
+  @include button-variant($background: $warning-light, $border: $warning-light, $color: $warning, $hover-background: $warning, $hover-border: $warning, $hover-color: $white);
+}
+.btn-danger-soft {
+  @include button-variant($background: $danger-light, $border: $danger-light, $color: $danger, $hover-background: $danger, $hover-border: $danger, $hover-color: $white);
+}
+.btn-light-soft {
+  @include button-variant($background: $light, $border: $light, $color: $dark-light, $hover-background: $dark-light, $hover-border: $white, $hover-color: $white);
+}
+.btn-dark-soft {
+  @include button-variant($background: $dark-light, $border: $white, $color: $white, $hover-background: $dark, $hover-border: $dark, $hover-color: $white);
+}
+.btn-link-soft {
+  text-decoration: none;
+  color: $dark;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+// Custom Outline Buttons
+.btn-outline-light {
+  @include button-variant($background: $light, $border:$light, $color: $dark, $hover-background: darken($light, 5%));
+}
+
+// Buttons with Icons
+.btn-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .icon-custom {
+    margin-right: 5px;
+  }
+}
+
+
+// Custom Toggle Buttons
+.btn-check + label {
+  border-radius: 2px;
+  line-height: 1 !important;
+}
+
+.btn-toggle {
+  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-color: $white, $active-color: $white, $disabled-background: $opacity-50, $disabled-border: $opacity-50, $disabled-color: $white);
+}
+.btn-toggle-soft {
+  @include button-variant($background: $primary-light, $border: $primary-light, $color: $primary, $disabled-background: $opacity-50, $disabled-border: $opacity-50, $disabled-color: $white);
+}
+.btn-toggle-outline {
+  @include button-variant($background: $white, $border: $primary, $color: $primary, $hover-background: $primary, $hover-border: $primary, $hover-color: $white, $disabled-background: $opacity-50, $disabled-border: $opacity-50, $disabled-color: $white);
+}
+
+
+
+@media (min-width: 768px) {
+  .navbar-title
+      {
+          position: absolute;
+          width: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          font-size: 1.75rem;
+      }
+  }
