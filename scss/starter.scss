@@ -381,3 +381,45 @@ $small-button-width: 25%;
   }
 }
 
+
+// Large Alert Buttons
+.alert-lg {
+  height: 188px;
+  width: 372px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
+  i {
+    height:40px;
+    width: 40px;
+    padding-bottom: 30px;;
+  }
+
+  
+}
+
+.alert-lg-success {
+  @include alert-variant($background: $success-light, $border: $success-light, $color: $dark);
+  strong {
+    color: $success;
+  }
+}
+
+.alert-lg-danger {
+  @include alert-variant($background: $danger-light, $border: $danger-light, $color: $dark);
+  strong {
+    color: $danger;
+  }
+}
+
+.alert-lg-warning {
+  @include alert-variant($background: $warning-light, $border: $warning-light, $color: $dark);
+  strong {
+    color: $warning;
+  }
+}
+
