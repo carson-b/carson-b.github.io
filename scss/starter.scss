@@ -303,3 +303,14 @@ $small-button-width: 25%;
           font-size: 1.75rem;
       }
   }
+
+
+  // Progress Bar
+  .progress-bar {
+    h6 {
+      font-size: 13px;
+      align-self: flex-end;
+      color: $dark;
+      margin: 0;
+    }
+  }
