@@ -14,16 +14,6 @@
 // Override Bootstrap here - This must be done BEFORE importing Bootstrap
 //
 
-// Toggle global options
-$enable-gradients: true;
-$enable-shadows: true;
-
-// Customize some defaults
-$body-color: rgb(0, 0, 0);
-$body-bg: #f5f5f5;
-$border-radius: .4rem;
-$btn-focus-box-shadow: none!important;
-
 // Customize Global Colours
 $primary: #00A5E3;
 $secondary: #4E7482;
@@ -33,6 +23,30 @@ $warning: #FC9B2E;
 $danger: #ED4548;
 $light: #F5F6F8;
 $dark: #061E2C;
+// Custom Colours
+$primary-light: #D1E8F0;
+$secondary-light: #D0D8DB;
+$success-light: #ACCFC6;
+$info-light: #CCF5FF;
+$warning-light: #FFDCB5;
+$danger-light: #FCCDCD;
+$dark-light: #061E2C30;
+$opacity-25: #CBDFF1;
+$opacity-50: #9DC6E7;
+$opacity-75: #6EB1DE;
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: rgb(0, 0, 0);
+$body-bg: #f5f5f5;
+$border-radius: .4rem;
+$btn-focus-box-shadow: none!important;
+$dropdown-link-hover-color: $primary;
+$dropdown-header-color: $primary;
+
 
 
 //
@@ -98,8 +112,20 @@ body {
 }
 
 button {
-  border-radius: 2px !important;
+border-radius: 2px !important;
 }
+
+@media (min-width: 768px) {
+  .navbar-title
+      {
+          position: absolute;
+          width: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          font-size: 1.75rem;
+      }
+  }
 
 /* font styling */
 @font-face {
@@ -107,17 +133,6 @@ button {
   src: url(../fonts/BeVietnamPro-Regular.ttf);
 }
 
-// Custom Colours
-$primary-light: #D1E8F0;
-$secondary-light: #D0D8DB;
-$success-light: #ACCFC6;
-$info-light: #CCF5FF;
-$warning-light: #FFDCB5;
-$danger-light: #FCCDCD;
-$dark-light: #061E2C30;
-$opacity-25: #CBDFF1;
-$opacity-50: #9DC6E7;
-$opacity-75: #6EB1DE;
 
 .bg-primary-light { background-color: $primary-light !important; }
 .bg-secondary-light { background-color: $secondary-light !important; }
@@ -291,26 +306,18 @@ $small-button-width: 25%;
 }
 
 
+// Custom Dropdown Buttons
+.dropdown-item:hover {
+  background-color: $primary-light;
+}
 
-@media (min-width: 768px) {
-  .navbar-title
-      {
-          position: absolute;
-          width: auto;
-          left: 50%;
-          transform: translateX(-50%);
-          text-align: center;
-          font-size: 1.75rem;
-      }
+
+// Progress Bar
+.progress-bar {
+  h6 {
+    font-size: 13px;
+    align-self: flex-end;
+    color: $dark;
+    margin: 0;
   }
-
-
-  // Progress Bar
-  .progress-bar {
-    h6 {
-      font-size: 13px;
-      align-self: flex-end;
-      color: $dark;
-      margin: 0;
-    }
-  }
+}
