@@ -306,7 +306,7 @@ $small-button-width: 25%;
 }
 
 
-// Custom Dropdown Buttons
+// Dropdown Buttons
 .dropdown-item:hover {
   background-color: $primary-light;
 }
@@ -321,3 +321,23 @@ $small-button-width: 25%;
     margin: 0;
   }
 }
+
+
+// Spinner
+.spinner-border {
+  height: 45px;
+  width: 45px;
+}
+
+.spinner-with-text {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    position: absolute;
+    color: $primary;
+  }
+}
+
