@@ -43,7 +43,7 @@
     <div class="container-fluid p-5 mt-5">
 
       <!-- Buttons section -->
-      <div class="container-fluid" id="buttons">
+      <div class="container-fluid p-2" id="buttons">
         <div class="row align-items-start">
 
           <!-- Buttons Left Column -->
@@ -137,28 +137,28 @@
             <div class="container">
               <div class="container border p-4">
                 <h1 class="display-6">Toggle States</h1>
-                <div class="row align-items-start">
+                <div class="row align-items-start w-50">
                   <div class="col">
                     <div class="container ps-0 pt-2">
                       <div class="d-flex flex-column justify-content-between">
                         <input type="checkbox" class="btn-check" id="toggle1" autocomplete="off">
-                        <label class="btn btn-lg btn-toggle mb-3" for="toggle1">Toggle1</label>
+                        <label class="btn btn-lg btn-toggle mb-3" for="toggle1">Toggle</label>
                         <input type="checkbox" class="btn-check" id="toggle2" autocomplete="off">
-                        <label class="btn btn-lg btn-toggle-soft mb-3" for="toggle2">Toggle2</label>
+                        <label class="btn btn-lg btn-toggle-soft mb-3" for="toggle2">Toggle</label>
                         <input type="checkbox" class="btn-check" id="toggle3" autocomplete="off">
-                        <label class="btn btn-lg btn-toggle-outline" for="toggle3">Toggle3</label>
+                        <label class="btn btn-lg btn-toggle-outline" for="toggle3">Toggle</label>
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="container ps-0 pt-2">
                       <div class="d-flex flex-column justify-content-between">
-                        <input type="checkbox" class="btn-check" id="tog1-disabled" autocomplete="off">
-                        <label class="btn btn-lg btn-toggle mb-3 opacity-50" for="tog1-disabled">Tog1-Disabled</label>
+                        <input type="checkbox" class="btn-check" id="tog1-disabled" autocomplete="off" disabled>
+                        <label class="btn btn-lg btn-toggle disabled mb-3" for="tog1-disabled">Disabled</label>
                         <input type="checkbox" class="btn-check" id="tog2-disabled" autocomplete="off" disabled>
-                        <label class="btn btn-lg btn-toggle-soft mb-3" for="tog2-disabled">Tog2-Disabled</label>
+                        <label class="btn btn-lg btn-toggle-soft disabled mb-3" for="tog2-disabled">Disabled</label>
                         <input type="checkbox" class="btn-check" id="tog3-disabled" autocomplete="off" disabled>
-                        <label class="btn btn-lg btn-toggle-outline" for="tog3-disabled">Tog3-Disabled</label>
+                        <label class="btn btn-lg btn-toggle-outline disabled" for="tog3-disabled">Disabled</label>
                       </div>
                     </div>
                   </div>
@@ -257,24 +257,18 @@
             </div>
             <!-- End Button Width Percentage -->
 
-            <!-- Buttons with Icons -->
+            <!-- Block Buttons -->
             <div class="container">
               <div class="container border p-4">
-                <h1 class="display-6">Buttons with Icons</h1>
-                <div class="d-flex justify-content-around pt-2">
-                  <button type="button" class="btn btn-md btn-primary">Primary</button>
-                  <button type="button" class="btn btn-md btn-secondary">Secondary</button>
-                  <button type="button" class="btn btn-md btn-success">Success</button>
-                  <button type="button" class="btn btn-md btn-danger">Danger</button>
-                  <button type="button" class="btn btn-md btn-warning">Warning</button>
-                  <button type="button" class="btn btn-md btn-info">Info</button>
-                  <button type="button" class="btn btn-md btn-light">Light</button>
-                  <button type="button" class="btn btn-md btn-dark">Dark</button>
-                  <button type="button" class="btn btn-md btn-link">Link</button>
+                <h1 class="display-6">Block Buttons</h1>
+                <div class="d-flex flex-column justify-content-around pt-2">
+                  <button type="button" class="btn btn-w-lg btn-lg btn-primary mb-3">Block Button</button>
+                  <button type="button" class="btn btn-w-lg btn-md btn-secondary mb-3">Block Button</button>
+                  <button type="button" class="btn btn-w-lg btn-sm btn-danger">Block Button</button>
                 </div>
               </div>
             </div>
-            <!-- End Buttons with Icons -->
+            <!-- End Block Buttons -->
 
           </div>
           <!-- End Buttons Right Column -->
@@ -285,7 +279,33 @@
 
       <!-- Misc section -->
       <div id="misc">
+        <div class="row align-items-start">
 
+          <!-- Misc Left Column -->
+          <div class="col">
+
+            <!-- Dropdown Buttons -->
+            <div class="container">
+              <div class="container border p-4">
+                <h1 class="display-6">Dropdown Buttons</h1>
+                <div class="d-flex justify-content-around pt-2">
+                  <div class="container border p-3 me-3">
+                    <button type="button" class="btn btn-w-lg btn-md btn-primary">100%</button>
+                  </div>
+                  <div class="container border p-3 me-3">
+                    <button type="button" class="btn btn-w-md btn-md btn-primary">50%</button>
+                  </div>
+                  <div class="container border p-3">
+                    <button type="button" class="btn btn-w-sm btn-md btn-primary">25%</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Dropdown Buttons -->
+
+          </div>
+
+        </div>
       </div>
       <!-- End Misc section -->
 
