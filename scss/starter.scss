@@ -307,9 +307,46 @@ $small-button-width: 25%;
 
 
 // Dropdown Buttons
-.dropdown-item:hover {
-  background-color: $primary-light;
+.btn-primary + .dropdown-menu {
+
+  background-color: $primary;
+  border: 1px solid $light;
+
+  .dropdown-item {
+    background-color: $primary;
+    color: $light;
+
+    &:hover {
+      background-color: $primary-light;
+      color: $primary;
+    }
+  }
+
+  .dropdown-divider {
+    border-top: 1px solid $light;
+  }
 }
+
+.btn-outline-primary + .dropdown-menu {
+
+  background-color: $light;
+  border: 1px solid $primary;
+
+  .dropdown-item {
+    background-color: $light;
+    color: $primary;
+
+    &:hover {
+      background-color: $primary-light;
+    }
+  }
+
+  .dropdown-divider {
+    border-top: 1px solid $primary;
+  }
+}
+
+
 
 
 // Progress Bar
