@@ -391,7 +391,7 @@ $small-button-width: 25%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
 
   i {
     height:40px;
@@ -399,7 +399,12 @@ $small-button-width: 25%;
     padding-bottom: 30px;;
   }
 
-  
+  strong {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+
 }
 
 .alert-lg-success {
