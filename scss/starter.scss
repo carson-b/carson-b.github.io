@@ -210,7 +210,7 @@ $small-button-width: 25%;
 
 // Custom Buttons - (background, border, colour, hover-background, hover-border, hover-colour, active-background, active-border)
 .btn-primary {
-  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $primary, $active-border: $primary);
+  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $primary, $active-border: $primary, $disabled-color: $white);
 }
 .btn-secondary {
   @include button-variant($background: $secondary, $border: $secondary, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $secondary, $active-border: $secondary);
@@ -299,7 +299,7 @@ $small-button-width: 25%;
   @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-color: $white, $active-color: $white, $disabled-background: $opacity-50, $disabled-border: $opacity-50, $disabled-color: $white);
 }
 .btn-toggle-soft {
-  @include button-variant($background: $primary-light, $border: $primary-light, $color: $primary, $disabled-background: $opacity-50, $disabled-border: $opacity-50, $disabled-color: $white, $active-background: $primary, $active-border: $primary, $active-color: $white);
+  @include button-variant($background: $primary-light, $border: $primary-light, $color: $primary, $hover-color: $white, $hover-background: $primary, $hover-border: $primary, $disabled-background: $opacity-50, $disabled-border: $opacity-50, $disabled-color: $white, $active-background: $primary, $active-border: $primary, $active-color: $white);
 }
 .btn-toggle-outline {
   @include button-variant($background: $white, $border: $primary, $color: $primary, $hover-background: $primary, $hover-border: $primary, $hover-color: $white, $disabled-background: $opacity-50, $disabled-border: $opacity-50, $disabled-color: $primary, $active-background: $primary, $active-border: $primary, $active-color: $white);
