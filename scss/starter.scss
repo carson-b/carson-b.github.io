@@ -359,6 +359,17 @@ $small-button-width: 25%;
   }
 }
 
+.progress-multiple {
+  .progress-bar {
+    width: 25%;
+    margin-right:3px;
+
+    &.bg-light span {
+      color: $primary;
+    }
+  }
+}
+
 
 // Spinner
 .spinner-border {
