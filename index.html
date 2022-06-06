@@ -172,7 +172,7 @@
               <div class="container border p-4">
                 <h1 class="display-6">Dropdown Buttons</h1>
                 <div class="d-flex justify-content-around pt-2">
-                  <div class="input-group mb-3">
+                  <div class="input-group">
                     <button class="btn btn-md btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -183,7 +183,7 @@
                     </ul>
                   </div>
 
-                  <div class="input-group mb-3">
+                  <div class="input-group">
                     <button class="btn btn-md btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -194,7 +194,7 @@
                     </ul>
                   </div>
 
-                  <div class="input-group mb-3">
+                  <div class="input-group">
                     <button class="btn btn-md btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
                     <ul class="dropdown-menu dropdown-menu-dark">
                       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -300,7 +300,7 @@
             <!-- End Button Width Percentage -->
 
             <!-- Block Buttons -->
-            <div class="container">
+            <div class="container mb-3">
               <div class="container border p-4">
                 <h1 class="display-6">Block Buttons</h1>
                 <div class="d-flex flex-column justify-content-around pt-2">
@@ -326,21 +326,6 @@
           <!-- Misc Left Column -->
           <div class="col">
 
-            <!-- Spinner -->
-            <div class="container">
-              <div class="container border p-4">
-                <h1 class="display-6">Spinner - loading/saving</h1>
-                <div class="d-flex justify-content-between w-25 pt-2">
-                  <div class="spinner-border text-primary" role="status"></div>
-                  <div class="spinner-with-text">
-                    <div class="spinner-border text-primary" role="status"></div>
-                    <span>49%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Spinner -->
-
             <!-- Top Border Alerts -->
             <div class="container">
               <div class="container border p-4">
@@ -362,6 +347,28 @@
               </div>
             </div>
             <!-- End Top Border Alerts -->
+
+            <!-- Large Alert -->
+            <div class="container">
+              <div class="container border p-4">
+                <h1 class="display-6">Large Alert</h1>
+                <div class="d-flex flex-row justify-content-around pt-2">
+                  <div class="alert-lg alert-lg-success alert-dismissible fade show me-3" role="alert">
+                    <i class="icon-custom suc-soft"></i><strong>Success</strong>The following event was successful
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                  <div class="alert-lg alert-lg-danger alert-dismissible fade show me-3" role="alert">
+                    <i class="icon-custom dan-soft"></i><strong>Error</strong>The following event failed
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                  <div class="alert-lg alert-lg-warning alert-dismissible fade show" role="alert">
+                    <i class="icon-custom war-soft"></i><strong>Warning</strong>The following event is incomplete
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Large Alert -->
 
           </div>
           <!-- End Misc Left Column -->
@@ -389,49 +396,42 @@
                       <h6>75%</h6>
                     </div>
                   </div>
-                  <div class="progress mb-3">
+                  <div class="progress mb-4">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                       <h6>100%</h6>
                     </div>
                   </div>
-                  <div class="progress progress-multiple mb-3">
-                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>Item 1 complete</span></div>
-                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>Item 2 complete</span></div>
-                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>Item 3 complete</span></div>
-                    <div class="progress-bar bg-light" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>Item 4</span></div>
+                  <div class="progress progress-multiple mb-4">
+                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div><span>Item 1 complete</span></div></div>
+                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div><span>Item 2 complete</span></div></div>
+                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div><span>Item 3 complete</span></div></div>
+                    <div class="progress-bar bg-light" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div><span>Item 4</span></div></div>
                   </div>
-                  <div class="progress progress-multiple">
-                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>Application</span></div>
-                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>Verification</span></div>
-                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>Report</span></div>
-                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>Item 4 Incomplete</span></div>
+                  <div class="progress progress-multiple w-100">
+                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div><span>Application</span></div></div>
+                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div><span>Verification</span></div></div>
+                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div><span>Report</span></div></div>
+                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div><span>Item 4 Incomplete</span></div></div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Progress Bars -->
 
-            <!-- Top Border Alerts -->
+            <!-- Spinner -->
             <div class="container">
               <div class="container border p-4">
-                <h1 class="display-6">Large Alert Buttons</h1>
-                <div class="d-flex flex-row justify-content-around pt-2">
-                  <div class="alert-lg alert-lg-success alert-dismissible fade show me-3" role="alert">
-                    <i class="icon-custom suc-soft"></i><strong>Success</strong>The following event was successful
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                  <div class="alert-lg alert-lg-danger alert-dismissible fade show me-3" role="alert">
-                    <i class="icon-custom dan-soft"></i><strong>Error</strong>The following event failed
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                  <div class="alert-lg alert-lg-warning alert-dismissible fade show" role="alert">
-                    <i class="icon-custom war-soft"></i><strong>Warning</strong>The following event is incomplete
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <h1 class="display-6">Spinner - loading/saving</h1>
+                <div class="d-flex justify-content-between w-25 pt-2">
+                  <div class="spinner-border text-primary" role="status"></div>
+                  <div class="spinner-with-text">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <span>49%</span>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- End Top Border Alerts -->
+            <!-- End Spinner -->
 
           </div>
           <!-- End Misc Right Column -->

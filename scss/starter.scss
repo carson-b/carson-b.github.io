@@ -143,7 +143,7 @@ border-radius: 2px !important;
 .bg-dark-light { background-color: $dark-light !important; }
 
 
-.col .container {
+.col .container:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -360,11 +360,21 @@ $small-button-width: 25%;
 }
 
 .progress-multiple {
+
+  height: 0.5rem;
+  border-radius: 0px;
+
   .progress-bar {
     width: 25%;
     margin-right:3px;
 
-    &.bg-light span {
+    div {
+      position: absolute;
+      transform: translate(0px, -17px);
+      width: 5.5%;
+    }
+
+    span {
       color: $primary;
     }
   }
