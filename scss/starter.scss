@@ -14,6 +14,33 @@
 // Override Bootstrap here - This must be done BEFORE importing Bootstrap
 //
 
+// Customize font family
+$font-family-sans-serif:
+/*   // Cross-platform generic font family (default user interface font)
+  system-ui,
+  // Safari for macOS and iOS (San Francisco) */
+  "Be Vietnam Pro",
+  "Open Sans";
+/*   // Windows
+  "BeVietnamThin",
+  // Android
+  Roboto,
+  // Basic web fallback
+  "Helvetica Neue", Arial,
+  // Linux
+  "Noto Sans",
+  "Liberation Sans",
+  // Sans serif fallback
+  "Open Sans",
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; */
+
+  // Customize font-weights
+$font-weight-light: 100;
+$font-weight-normal: 200;
+$font-weight-bold: 400;
+$font-weight-base: $font-weight-normal;
+
 // Customize Global Colours
 $primary: #00A5E3;
 $secondary: #4E7482;
@@ -125,13 +152,66 @@ border-radius: 2px !important;
           text-align: center;
           font-size: 1.75rem;
       }
-  }
-
-/* font styling */
-@font-face {
-  font-family: BeVietnamRegular;
-  src: url(../fonts/BeVietnamPro-Regular.ttf);
 }
+
+@media (max-width: 1265px) {
+  .navbar-title
+      {
+          display: none;
+      }
+}
+
+th {
+  height: 70px;
+}
+
+tr {
+  height: 47px;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -135px;
+  visibility: hidden;
+}
+
+.openSans {
+  font-family: "Open Sans";
+}
+
+.display-6 {
+  font-weight: 200;
+}
+/* font styling */
+
+/* @font-face {
+  font-family: "BeVietnam";
+  src: url(../fonts/BeVietnamPro-Thin.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BeVietnam";
+  src: url(../fonts/BeVietnamPro-ThinItalic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "BeVietnam";
+  src: url(../fonts/BeVietnamPro-SemiBold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BeVietnam";
+  src: url(../fonts/BeVietnamPro-SemiBoldItalic.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+} */
 
 
 .bg-primary-light { background-color: $primary-light !important; }
@@ -273,8 +353,47 @@ $small-button-width: 25%;
 }
 
 // Custom Outline Buttons
+.btn-outline-primary {
+  @include button-variant($background: $light, $border:$primary, $color: $primary, $hover-color: $white, $hover-background: $primary);
+  &.btn-outline-thick {
+    border: 2px solid $primary;
+  }
+}
+.btn-outline-secondary {
+  @include button-variant($background: $light, $border:$secondary, $color: $secondary, $hover-color: $white, $hover-background: $secondary);
+  &.btn-outline-thick {
+    border: 2px solid $secondary;
+  }
+}
+.btn-outline-success {
+  @include button-variant($background: $light, $border:$success, $color: $success, $hover-color: $white, $hover-background: $success);
+  &.btn-outline-thick {
+    border: 2px solid $success;
+  }
+}
+.btn-outline-danger {
+  @include button-variant($background: $light, $border:$danger, $color: $danger, $hover-color: $white, $hover-background: $danger);
+  &.btn-outline-thick {
+    border: 2px solid $danger;
+  }
+}
+.btn-outline-warning {
+  @include button-variant($background: $light, $border:$warning, $color: $warning, $hover-color: $white, $hover-background: $warning);
+  &.btn-outline-thick {
+    border: 2px solid $warning;
+  }
+}
+.btn-outline-info {
+  @include button-variant($background: $light, $border:$info, $color: $info, $hover-color: $white, $hover-background: $info);
+  &.btn-outline-thick {
+    border: 2px solid $info;
+  }
+}
 .btn-outline-light {
   @include button-variant($background: $light, $border:$light, $color: $dark, $hover-background: darken($light, 5%));
+}
+.btn-outline-dark.btn-outline-thick {
+  border: 2px solid $dark;
 }
 
 // Buttons with Icons
@@ -292,7 +411,7 @@ $small-button-width: 25%;
 // Custom Toggle Buttons
 .btn-check + label {
   border-radius: 2px;
-  line-height: 1 !important;
+  line-height: 1.35 !important;
 }
 
 .btn-toggle {
@@ -383,8 +502,13 @@ $small-button-width: 25%;
 
 // Spinner
 .spinner-border {
-  height: 45px;
-  width: 45px;
+  min-height: 45px;
+  min-width: 45px;
+}
+
+.spinner-border-xsm {
+  min-height: 15px;
+  min-width: 15px;
 }
 
 .spinner-with-text {
@@ -450,6 +574,7 @@ $small-button-width: 25%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 2rem;
 
   i {

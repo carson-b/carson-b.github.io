@@ -3,16 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://kendo.cdn.telerik.com/2022.2.510/styles/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="https://kendo.cdn.telerik.com/2022.2.510/styles/kendo.bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kendo.cdn.telerik.com/2022.2.510/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.2.510/js/kendo.all.min.js"></script>
+
+
     <link rel="stylesheet" href="assets/css/starter.css">
 
     <!-- open sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
     <title>Mitacs Styleguide</title>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navbar">
@@ -32,6 +44,7 @@
             <div class="navbar-nav ms-auto">
               <a class="nav-link" aria-current="page" href="#buttons">Buttons</a>
               <a class="nav-link" href="#misc">Misc.</a>
+              <a class="nav-link" href="#grid">Grid</a>
               <a class="nav-link" href="#fonts">Fonts</a>
             </div>
           </div>
@@ -44,8 +57,9 @@
     <div class="container-fluid p-5 mt-5">
 
       <!-- Buttons section -->
-      <div class="container-fluid p-2" id="buttons">
+      <div class="container-fluid p-2 pb-5">
         <h1 class="display-5">Buttons</h1>
+        <a class="anchor" id="buttons"></a>
         <div class="row align-items-start">
 
           <!-- Buttons Left Column -->
@@ -241,15 +255,15 @@
               <div class="container border p-4">
                 <h1 class="display-6">Outline Buttons - 2px</h1>
                 <div class="d-flex justify-content-around pt-2">
-                  <button type="button" class="btn btn-md btn-outline-primary">Primary</button>
-                  <button type="button" class="btn btn-md btn-outline-secondary">Secondary</button>
-                  <button type="button" class="btn btn-md btn-outline-success">Success</button>
-                  <button type="button" class="btn btn-md btn-outline-danger">Danger</button>
-                  <button type="button" class="btn btn-md btn-outline-warning">Warning</button>
-                  <button type="button" class="btn btn-md btn-outline-info">Info</button>
-                  <button type="button" class="btn btn-md btn-outline-light">Light</button>
-                  <button type="button" class="btn btn-md btn-outline-dark">Dark</button>
-                  <button type="button" class="btn btn-md btn-outline-link">Link</button>
+                  <button type="button" class="btn btn-md btn-outline-primary btn-outline-thick">Primary</button>
+                  <button type="button" class="btn btn-md btn-outline-secondary btn-outline-thick">Secondary</button>
+                  <button type="button" class="btn btn-md btn-outline-success btn-outline-thick">Success</button>
+                  <button type="button" class="btn btn-md btn-outline-danger btn-outline-thick">Danger</button>
+                  <button type="button" class="btn btn-md btn-outline-warning btn-outline-thick">Warning</button>
+                  <button type="button" class="btn btn-md btn-outline-info btn-outline-thick">Info</button>
+                  <button type="button" class="btn btn-md btn-outline-light btn-outline-thick">Light</button>
+                  <button type="button" class="btn btn-md btn-outline-dark btn-outline-thick">Dark</button>
+                  <button type="button" class="btn btn-md btn-outline-link btn-outline-thick">Link</button>
                 </div>
               </div>
             </div>
@@ -264,7 +278,9 @@
                   <button type="button" class="btn btn-md btn-icon btn-success"><i class="icon-custom suc"></i>Success</button>
                   <button type="button" class="btn btn-md btn-icon btn-warning"><i class="icon-custom war"></i>Warning</button>
                   <button type="button" class="btn btn-md btn-icon btn-danger"><i class="icon-custom dan"></i>Danger</button>
-                  <button type="button" class="btn btn-md btn-icon btn-dark"><i class="icon-custom dar"></i>Loading</button>
+                  <button type="button" class="btn btn-md btn-icon btn-dark">
+                    <span class="spinner-border spinner-border-xsm me-2" role="status" aria-hidden="true"></span>
+                    Loading...</button>
                 </div>
               </div>
             </div>
@@ -293,7 +309,7 @@
                   <div class="container border p-3 me-3">
                     <button type="button" class="btn btn-w-md btn-md btn-primary">50%</button>
                   </div>
-                  <div class="container border p-3">
+                  <div class="container border p-3 mb-3">
                     <button type="button" class="btn btn-w-sm btn-md btn-primary">25%</button>
                   </div>
                 </div>
@@ -322,8 +338,9 @@
       <!-- End Buttons section -->
 
       <!-- Misc section -->
-      <div class="container-fluid p-2" id="misc">
+      <div class="container-fluid p-2 pb-5">
         <h1 class="display-5">Miscellaneous</h1>
+        <a class="anchor" id="misc"></a>
         <div class="row align-items-start">
 
           <!-- Misc Left Column -->
@@ -380,7 +397,7 @@
           <div class="col">
 
             <!-- Progress Bars -->
-            <div class="container">
+            <div class="container" style="min-width:460px;">
               <div class="container border p-4">
                 <h1 class="display-6">Progress Bars</h1>
                 <div class="d-flex flex-column justify-content-start pt-2">
@@ -426,7 +443,7 @@
               <div class="container border p-4">
                 <h1 class="display-6">Spinner - loading/saving</h1>
                 <div class="d-flex justify-content-between w-25 pt-2">
-                  <div class="spinner-border text-primary" role="status"></div>
+                  <div class="spinner-border text-primary me-3" role="status"></div>
                   <div class="spinner-with-text">
                     <div class="spinner-border text-primary" role="status"></div>
                     <span>49%</span>
@@ -443,43 +460,155 @@
       </div>
       <!-- End Misc section -->
 
+      <!-- Grid Section -->
+      <div class="container-fluid p-2 pb-5">
+        <h1 class="display-5">Grid</h1>
+        <a class="anchor" id="grid"></a>
+        <div class="container border p-4">
+          <div id="ordersGrid"></div>
+          <script>
+
+            $(function() {
+
+              $("#kendoVersion").text(kendo.version);
+
+              var orderData = [
+                { Application: 134561, FR: "FR12345", InternName: "Jane Doe", City: "Colón", Country: "Panama" },
+                { Application: 134562, FR: "FR12345", InternName: "Jane Doe", City: "Manila", Country: "Philippines" },
+                { Application: 134563, FR: "FR12345", InternName: "Jane Doe", City: "Singapore", Country: "Singapore" },
+                { Application: 134564, FR: "FR12345", InternName: "Jane Doe", City: "Busan", Country: "South Korea" },
+                { Application: 134565, FR: "FR12345", InternName: "Jane Doe", City: "Shenzhen", Country: "China" },
+                { Application: 63456, FR: "FR12345", InternName: "John Doe", City: "Shanghai", Country: "China" },
+                { Application: 73456, FR: "FR12345", InternName: "John Doe", City: "Tokyo", Country: "Japan" },
+                { Application: 83456, FR: "FR12345", InternName: "John Doe", City: "Port Klang", Country: "Malaysia" },
+                { Application: 134566, FR: "FR12345", InternName: "Jane Doe", City: "Hong Kong", Country: "China" },
+                { Application: 134567, FR: "FR12345", InternName: "Jane Doe", City: "Dubai", Country: "UAE" },
+                { Application: 12345, FR: "FR12345", InternName: "John Doe", City: "Antwerp", Country: "Belgium" },
+                { Application: 23456, FR: "FR12345", InternName: "John Doe", City: "Singapore", Country: "Singapore" },
+                { Application: 33456, FR: "FR12345", InternName: "John Doe", City: "Shanghai", Country: "China" },
+                { Application: 43456, FR: "FR12345", InternName: "John Doe", City: "Hamburg", Country: "Germany" },
+                { Application: 53456, FR: "FR12345", InternName: "John Doe", City: "Mumbai", Country: "India" },
+                { Application: 93456, FR: "FR12345", InternName: "John Doe", City: "Rotterdam", Country: "Netherlands" },
+                { Application: 134560, FR: "FR12345", InternName: "John Doe", City: "Vancouver", Country: "Canada" },
+                { Application: 134568, FR: "FR12345", InternName: "Jane Doe", City: "Felixstowe", Country: "UK" },
+                { Application: 134569, FR: "FR12345", InternName: "Jane Doe", City: "Los Angeles", Country: "USA" },
+                { Application: 234560, FR: "FR12345", InternName: "Jane Doe", City: "New York", Country: "USA" },
+                { Application: 234561, FR: "FR12345", InternName: "Jane Doe", City: "Guangzhou", Country: "China" },
+                { Application: 234562, FR: "FR12345", InternName: "Jane Doe", City: "Long Beach", Country: "USA" },
+                { Application: 234563, FR: "FR12345", InternName: "Jane Doe", City: "Singapore", Country: "Singapore" }
+               ];
+
+              var gridDataSource = new kendo.data.DataSource({
+                data: orderData,
+                schema: {
+                  model: {
+                    fields: {
+                      Application: { type: "number" },
+                      FR: { type: "string" },
+                      InternName: { type: "string" },
+                      City: { type: "string" },
+                      Country: { type: "string" }
+                    }
+                  }
+                },
+                pageSize: 10,
+                sort: {
+                  field: "OrderDate",
+                  dir: "desc"
+                }
+              });
+
+              $("#ordersGrid").kendoGrid({
+                dataSource: gridDataSource,
+                sortable: true,
+                filterable: true,
+                pageable: true
+              });
+
+            });
+
+          </script>
+        </div>
+      </div>
+      <!-- End Grid Section -->
+
       <!-- Fonts section -->
-      <div class="container-fluid p-2" id="fonts">
+      <div class="container-fluid p-2 pb-5">
         <h1 class="display-5">Fonts</h1>
-        <div class="row align-items-start">
+        <a class="anchor" id="fonts"></a>
+        <div class="row align-items-start pt-3">
 
           <!-- Fonts Left Column -->
-          <div class="col">
+          <div class="col me-5">
 
             <!-- BeVietnam Font -->
             <div class="container bevietnam">
-              <h1 class="display-6">"Be Vietnam"</h1>
-
+              <p class="fs-2">"Be Vietnam", sans-serif</p>
+              <div class="container px-0 d-flex flex-row justify-content-between">
+                <h1 class="display-5" style="font-weight:100">Aa</h1>
+                <h1 class="display-5" style="font-weight: 300;">Aa</h1>
+                <h1 class="display-5" style="font-weight: 500;">Aa</h1>
+                <h1 class="display-5" style="font-weight: 600;">Aa</h1>
+                <h1 class="display-5" style="font-weight: 700;">Aa</h1>
+                <h1 class="display-5" style="font-weight: 800;">Aa</h1>
+              </div>
+              <div class="container px-0 d-flex flex-column justify-content-start">
+                <span class="fw-bold">Inline text elements</span>
+                <span class="fs-7">Styling for common inline HTML5 elements.</span><br>
+                <span class="fs-6 fw-bold">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span><br>
+                <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                <p><u>This line of text will render as underlined</u></p>
+                <p><small>This line of text is meant to be treated as fine print.</small></p>
+                <p><strong>This line rendered as bold text.</strong></p>
+                <p><em>This line rendered as italicized text.</em></p>
+              </div>
             </div>
+            <!-- End BeVietnam Font -->
 
           </div>
           <!-- Fonts Right Column -->
           <div class="col">
 
             <!-- Open Sans Font -->
-            <div class="container opensans">
-              <h1 class="display-6">Open Sans</h1>
-              <div class="container d-flex flex-row justify-content-between">
-
+            <div class="container openSans">
+              <p class="fs-2">"Open Sans", sans-serif</p>
+              <div class="container px-0 d-flex flex-row justify-content-between">
+                <h1 class="display-5" style="font-weight:100">Aa</h1>
+                <h1 class="display-5" style="font-weight: 400;">Aa</h1>
+                <h1 class="display-5" style="font-weight: 500;">Aa</h1>
+                <h1 class="display-5" style="font-weight: 600;">Aa</h1>
+                <h1 class="display-5" style="font-weight: 700;">Aa</h1>
+                <h1 class="display-5" style="font-weight: 800;">Aa</h1>
               </div>
-
+              <div class="container px-0 d-flex flex-column justify-content-start">
+                <span class="fw-bold">Inline text elements</span>
+                <span class="fs-7">Styling for common inline HTML5 elements.</span><br>
+                <span class="fs-6 fw-bold">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span><br>
+                <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                <p><u>This line of text will render as underlined</u></p>
+                <p><small>This line of text is meant to be treated as fine print.</small></p>
+                <p><strong>This line rendered as bold text.</strong></p>
+                <p><em>This line rendered as italicized text.</em></p>
+              </div>
             </div>
+            <!-- End Open Sans Font -->
 
           </div>
-        </div>
+          <!-- End Fonts Right Column -->
 
+        </div>
       </div>
       <!-- End Fonts section -->
 
     </div>
     <!-- End Main Wrapper -->
+    <script type="module" src="assets/js/starter.js"></script>
 
-      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-      <script type="module" src="assets/js/starter.js"></script>
   </body>
 </html>
