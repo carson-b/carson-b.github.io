@@ -73,6 +73,15 @@ $border-radius: .4rem;
 $btn-focus-box-shadow: none!important;
 $dropdown-link-hover-color: $primary;
 $dropdown-header-color: $primary;
+$display-font-weight: 200;
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 1.5rem
+);
 
 
 
@@ -138,7 +147,7 @@ body {
   position: relative;
 }
 
-button {
+.btn {
 border-radius: 2px !important;
 }
 
@@ -180,40 +189,8 @@ a.anchor {
   font-family: "Open Sans";
 }
 
-.display-6 {
-  font-weight: 200;
-}
-/* font styling */
 
-/* @font-face {
-  font-family: "BeVietnam";
-  src: url(../fonts/BeVietnamPro-Thin.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BeVietnam";
-  src: url(../fonts/BeVietnamPro-ThinItalic.ttf) format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "BeVietnam";
-  src: url(../fonts/BeVietnamPro-SemiBold.ttf) format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BeVietnam";
-  src: url(../fonts/BeVietnamPro-SemiBoldItalic.ttf) format("truetype");
-  font-weight: bold;
-  font-style: italic;
-} */
-
-
+// Soft background colours
 .bg-primary-light { background-color: $primary-light !important; }
 .bg-secondary-light { background-color: $secondary-light !important; }
 .bg-success-light { background-color: $success-light !important; }
@@ -229,6 +206,21 @@ a.anchor {
 
 
 // Custom Icons
+svg {
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.icon, .btn-icon {
+  svg {
+    height: 17px;
+    width: 17px;
+  }
+}
+
+
 .icon {
   width: 35px;
   height: 35px;
@@ -236,6 +228,119 @@ a.anchor {
   display: flex;
   justify-content: center;
   align-items: center;
+
+
+  &.bg-primary {
+    svg {
+      stroke: $primary-light;
+    }
+    &:hover {
+      background-color: $primary-light !important;
+      svg {
+        stroke: $primary;
+      }
+    }
+  }
+  &.bg-success {
+    svg {
+      stroke: $success-light;
+    }
+    &:hover {
+      background-color: $success-light !important;
+      svg {
+        stroke: $success;
+      }
+    }
+  }
+  &.bg-danger {
+    svg {
+      stroke: $danger-light;
+    }
+    &:hover {
+      background-color: $danger-light !important;
+      svg {
+        stroke: $danger;
+      }
+    }
+  }
+  &.bg-warning {
+    svg {
+      stroke: $warning-light;
+    }
+    &:hover {
+      background-color: $warning-light !important;
+      svg {
+        stroke: $warning;
+      }
+    }
+  }
+  &.bg-dark {
+    svg {
+      stroke: $light;
+    }
+    &:hover {
+      background-color: $dark-light !important;
+      svg {
+        stroke: $dark;
+      }
+    }
+  }
+
+  &.bg-primary-light {
+    svg {
+      stroke: $primary;
+    }
+    &:hover {
+      background-color: $primary !important;
+      svg {
+        stroke: $primary-light;
+      }
+    }
+  }
+  &.bg-success-light {
+    svg {
+      stroke: $success;
+    }
+    &:hover {
+      background-color: $success !important;
+      svg {
+        stroke: $success-light;
+      }
+    }
+  }
+  &.bg-danger-light {
+    svg {
+      stroke: $danger;
+    }
+    &:hover {
+      background-color: $danger !important;
+      svg {
+        stroke: $danger-light;
+      }
+    }
+  }
+  &.bg-warning-light {
+    svg {
+      stroke: $warning;
+    }
+    &:hover {
+      background-color: $warning !important;
+      svg {
+        stroke: $warning-light;
+      }
+    }
+  }
+  &.bg-dark-light {
+    svg {
+      stroke: $dark;
+    }
+    &:hover {
+      background-color: $dark !important;
+      svg {
+        stroke: $light;
+      }
+    }
+  }
 }
 
 
@@ -248,18 +353,19 @@ a.anchor {
   /* Primary Icon */
   &.pri { background-image : url(../img/ico_pri_wt.png); }
   &.pri-soft { background-image: url(../img/ico_pri_bl.png); }
+  &.pri-soft-lg { background-image: url(../assets/img/); }
 
   /* Success Icon */
   &.suc { background-image : url(../img/ico_suc_wt.png); }
   &.suc-soft { background-image : url(/assets/img/ico_suc_gr.png); }
 
-  /* Warning Icon */
-  &.war { background-image : url(../img/ico_war_wt.png); }
-  &.war-soft { background-image : url(../img/ico_war_or.png); }
-
   /* Danger Icon */
   &.dan { background-image : url(../img/ico_dan_wt.png); }
   &.dan-soft { background-image : url(../img/ico_dan_rd.png); }
+
+  /* Warning Icon */
+  &.war { background-image : url(../img/ico_war_wt.png); }
+  &.war-soft { background-image : url(../img/ico_war_or.png); }
 
   /* Dark/Loading Icon */
   &.dar { background-image : url(../img/ico_ld_wt.png); }
@@ -290,28 +396,28 @@ $small-button-width: 25%;
 
 // Custom Buttons - (background, border, colour, hover-background, hover-border, hover-colour, active-background, active-border)
 .btn-primary {
-  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $primary, $active-border: $primary, $disabled-color: $white);
+  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-background: $primary-light, $hover-border: $primary-light, $hover-color: $primary, $active-color: $white, $disabled-color: $white);
 }
 .btn-secondary {
-  @include button-variant($background: $secondary, $border: $secondary, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $secondary, $active-border: $secondary);
+  @include button-variant($background: $secondary, $border: $secondary, $color: $white, $hover-background: $secondary-light, $hover-border: $secondary-light, $hover-color: $secondary, $active-color: $white);
 }
 .btn-success {
-  @include button-variant($background: $success, $border: $success, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $success, $active-border: $success);
+  @include button-variant($background: $success, $border: $success, $color: $white, $hover-background: $success-light, $hover-border: $success-light, $hover-color: $success, $active-color: $white);
 }
 .btn-info {
-  @include button-variant($background: $info, $border: $info, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $info, $active-border: $info);
+  @include button-variant($background: $info, $border: $info, $color: $white, $hover-background: $info-light, $hover-border: $info-light, $hover-color: $info, $active-color: $white);
 }
 .btn-warning {
-  @include button-variant($background: $warning, $border: $warning, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $warning, $active-border: $warning);
+  @include button-variant($background: $warning, $border: $warning, $color: $white, $hover-background: $warning-light, $hover-border: $warning-light, $hover-color: $warning, $active-color: $white);
 }
 .btn-danger {
-  @include button-variant($background: $danger, $border: $danger, $color: $white, $hover-color: $white, $active-color: $white, $active-background: $danger, $active-border: $danger);
+  @include button-variant($background: $danger, $border: $danger, $color: $white, $hover-background: $danger-light, $hover-border: $danger-light, $hover-color: $danger, $active-color: $white);
 }
 .btn-light {
-  @include button-variant($background: $light, $border: $light, $color: $dark, $hover-color: $dark, $hover-background: darken($light, 5%), $active-color: $dark, $active-border: $light);
+  @include button-variant($background: $light, $border: $light, $color: $dark, $hover-background: $light, $hover-border: $light, $hover-color: $dark-light, $active-color: $dark, $active-border: $light);
 }
 .btn-dark {
-  @include button-variant($background: $dark, $border: $dark, $color: $white, $hover-background: lighten($dark, 5%), $hover-border: lighten($dark, 5%));
+  @include button-variant($background: $dark, $border: $dark, $color: $white, $hover-background: $dark-light, $hover-border: lighten($dark-light, 70%), $hover-color: $dark, $active-color: $white);
 }
 .btn-link {
   text-decoration: none;
@@ -338,10 +444,10 @@ $small-button-width: 25%;
   @include button-variant($background: $danger-light, $border: $danger-light, $color: $danger, $hover-background: $danger, $hover-border: $danger, $hover-color: $white);
 }
 .btn-light-soft {
-  @include button-variant($background: $light, $border: $light, $color: $dark-light, $hover-background: $dark-light, $hover-border: $white, $hover-color: $white);
+  @include button-variant($background: $light, $border: $light, $color: $dark-light, $hover-background: $dark-light, $hover-border: $white, $hover-color: $dark);
 }
 .btn-dark-soft {
-  @include button-variant($background: $dark-light, $border: lighten($dark-light, 70%), $color: $white, $hover-background: $dark, $hover-border: $dark, $hover-color: $white);
+  @include button-variant($background: $dark-light, $border: lighten($dark-light, 70%), $color: $dark, $hover-background: $dark, $hover-border: $dark, $hover-color: $white, $active-color: $dark, $active-border: lighten($dark-light, 70%));
 }
 .btn-link-soft {
   text-decoration: none;
@@ -354,37 +460,37 @@ $small-button-width: 25%;
 
 // Custom Outline Buttons
 .btn-outline-primary {
-  @include button-variant($background: $light, $border:$primary, $color: $primary, $hover-color: $white, $hover-background: $primary);
+  @include button-variant($background: $light, $border:$primary, $color: $primary, $hover-color: $white, $hover-background: $primary, $active-color: $primary);
   &.btn-outline-thick {
     border: 2px solid $primary;
   }
 }
 .btn-outline-secondary {
-  @include button-variant($background: $light, $border:$secondary, $color: $secondary, $hover-color: $white, $hover-background: $secondary);
+  @include button-variant($background: $light, $border:$secondary, $color: $secondary, $hover-color: $white, $hover-background: $secondary, $active-color: $secondary);
   &.btn-outline-thick {
     border: 2px solid $secondary;
   }
 }
 .btn-outline-success {
-  @include button-variant($background: $light, $border:$success, $color: $success, $hover-color: $white, $hover-background: $success);
+  @include button-variant($background: $light, $border:$success, $color: $success, $hover-color: $white, $hover-background: $success, $active-color: $success);
   &.btn-outline-thick {
     border: 2px solid $success;
   }
 }
 .btn-outline-danger {
-  @include button-variant($background: $light, $border:$danger, $color: $danger, $hover-color: $white, $hover-background: $danger);
+  @include button-variant($background: $light, $border:$danger, $color: $danger, $hover-color: $white, $hover-background: $danger, $active-color: $danger);
   &.btn-outline-thick {
     border: 2px solid $danger;
   }
 }
 .btn-outline-warning {
-  @include button-variant($background: $light, $border:$warning, $color: $warning, $hover-color: $white, $hover-background: $warning);
+  @include button-variant($background: $light, $border: $warning, $color: $warning, $hover-color: $white, $hover-background: $warning, $active-color: $warning);
   &.btn-outline-thick {
     border: 2px solid $warning;
   }
 }
 .btn-outline-info {
-  @include button-variant($background: $light, $border:$info, $color: $info, $hover-color: $white, $hover-background: $info);
+  @include button-variant($background: $light, $border:$info, $color: $info, $hover-color: $white, $hover-background: $info, $active-color: $info);
   &.btn-outline-thick {
     border: 2px solid $info;
   }
@@ -392,8 +498,11 @@ $small-button-width: 25%;
 .btn-outline-light {
   @include button-variant($background: $light, $border:$light, $color: $dark, $hover-background: darken($light, 5%));
 }
-.btn-outline-dark.btn-outline-thick {
-  border: 2px solid $dark;
+.btn-outline-dark {
+  @include button-variant($background: $light, $border:$dark, $color: $dark, $hover-background: $dark, $hover-color: $white, $active-background: $light);
+  &.btn-outline-thick {
+    border: 2px solid $dark;
+  }
 }
 
 // Buttons with Icons
@@ -402,8 +511,64 @@ $small-button-width: 25%;
   flex-direction: row;
   align-items: center;
 
-  .icon-custom {
+  svg {
     margin-right: 5px;
+  }
+
+  &.btn-primary {
+    svg {
+      stroke: $primary-light;
+    }
+    &:hover {
+      svg {
+        stroke: $primary;
+      }
+    }
+  }
+  &.btn-success {
+    svg {
+      stroke: $success-light;
+    }
+    &:hover {
+      svg {
+        stroke: $success;
+      }
+    }
+  }
+  &.btn-warning {
+    svg {
+      stroke: $warning-light;
+    }
+    &:hover {
+      svg {
+        stroke: $warning;
+      }
+    }
+  }
+  &.btn-danger {
+    svg {
+      stroke: $danger-light;
+    }
+    &:hover {
+      svg {
+        stroke: $danger;
+      }
+    }
+  }
+  &.btn-dark {
+    svg {
+      stroke: $light;
+    }
+    &:hover {
+      svg {
+        stroke: $dark;
+      }
+    }
+    &:active {
+      svg {
+        stroke: $light;
+      }
+    }
   }
 }
 
@@ -464,8 +629,6 @@ $small-button-width: 25%;
     border-top: 1px solid $primary;
   }
 }
-
-
 
 
 // Progress Bar
@@ -577,10 +740,9 @@ $small-button-width: 25%;
   text-align: center;
   padding: 2rem;
 
-  i {
-    height:40px;
-    width: 40px;
-    padding-bottom: 30px;;
+  svg {
+    height:40px !important;
+    width: 40px !important;
   }
 
   strong {
@@ -591,6 +753,24 @@ $small-button-width: 25%;
   .btn-close {
     position: absolute;
 
+  }
+
+  &.alert-lg-success {
+    svg {
+      stroke: $success
+    }
+  }
+
+  &.alert-lg-danger {
+    svg {
+      stroke: $danger
+    }
+  }
+
+  &.alert-lg-warning {
+    svg {
+      stroke: $warning
+    }
   }
 
 }
