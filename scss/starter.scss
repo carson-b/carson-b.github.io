@@ -442,6 +442,7 @@ $small-button-width: 25%;
 
 // Large Alert Buttons
 .alert-lg {
+  position: relative;
   height: 188px;
   width: 372px;
   border-radius: 2px;
@@ -462,6 +463,10 @@ $small-button-width: 25%;
     padding-bottom: 1rem;
   }
 
+  .btn-close {
+    position: absolute;
+
+  }
 
 }
 
