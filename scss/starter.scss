@@ -16,9 +16,6 @@
 
 // Customize font family
 $font-family-sans-serif:
-/*   // Cross-platform generic font family (default user interface font)
-  system-ui,
-  // Safari for macOS and iOS (San Francisco) */
   "Be Vietnam Pro",
   "Open Sans";
 /*   // Windows
@@ -35,7 +32,7 @@ $font-family-sans-serif:
   // Emoji fonts
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; */
 
-  // Customize font-weights
+// Customize font-weights
 $font-weight-light: 100;
 $font-weight-normal: 200;
 $font-weight-bold: 400;
@@ -417,7 +414,7 @@ $small-button-width: 25%;
   @include button-variant($background: $light, $border: $light, $color: $dark, $hover-background: $light, $hover-border: $light, $hover-color: $dark-light, $active-color: $dark, $active-border: $light);
 }
 .btn-dark {
-  @include button-variant($background: $dark, $border: $dark, $color: $white, $hover-background: $dark-light, $hover-border: lighten($dark-light, 70%), $hover-color: $dark, $active-color: $white);
+  @include button-variant($background: $dark, $border: $dark, $color: $primary, $hover-background: $dark-light, $hover-border: lighten($dark-light, 70%), $hover-color: $dark, $active-color: $white);
 }
 .btn-link {
   text-decoration: none;
